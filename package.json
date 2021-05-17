@@ -1,5 +1,5 @@
 {
-  "name": "neeraj",
+  "name": "neeraj-bio",
   "version": "1.0.0",
   "bin": {
     "neeraj": "index.js"
