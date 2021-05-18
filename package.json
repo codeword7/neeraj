@@ -2,6 +2,9 @@
   "name": "neeraj-bio",
   "version": "1.0.0",
   "bin": {
-    "neeraj": "index.js"
+    "neeraj-bio": "index.js"
+  },
+  "dependencies": {
+    "clear-any-console": "^1.16.2"
   }
 }
