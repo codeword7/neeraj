@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const welcome = require('cli-welcome')
 const pkgJson = require('./package.json')
+const chalk = require('chalk')
+const log = console.log;
 
 welcome({
   title: pkgJson.name,
@@ -13,4 +15,4 @@ welcome({
   clear: true,
 });
 
-console.log(`Neeraj Kumar - Software Engineer`);
+log(` ${chalk.bgBlue.bold(` Neeraj Kumar `)} - Software Engineer`);
