@@ -1,6 +1,6 @@
 {
   "name": "neeraj-bio",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Get to know neeraj via `npx neeraj-bio`.",
   "bin": {
     "neeraj-bio": "index.js"
@@ -9,6 +9,8 @@
     "cli-welcome": "^2.2.2"
   },
   "keywords": [
-    "neeraj kumar","neeraj yadav", "neeraj"
+    "neeraj kumar",
+    "neeraj yadav",
+    "neeraj"
   ]
 }
