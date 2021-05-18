@@ -1,6 +1,6 @@
 {
   "name": "neeraj-bio",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Get to know neeraj via `npx neeraj-bio`.",
   "bin": {
     "neeraj-bio": "index.js"
