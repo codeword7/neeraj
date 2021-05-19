@@ -2,6 +2,7 @@
 const welcome = require('cli-welcome')
 const pkgJson = require('./package.json')
 const chalk = require('chalk')
+const checkNode = require('cli-check-node')
 const log = console.log;
 
 //Alerts
@@ -10,6 +11,8 @@ const success = chalk.green.inverse
 const info = chalk.blue.inverse
 const warning = chalk.keyword(`orange`).inverse
 const error = chalk.red.bold.inverse
+
+checkNode('12')
 
 welcome({
   title: pkgJson.name,
