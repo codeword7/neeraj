@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const chalk = require('chalk')
+// const handleError = require('cli-handle-error')
 const log = console.log;
 const init = require('./utils/init')
 //Alerts
