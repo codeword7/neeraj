@@ -7,8 +7,9 @@ const helpText = `
         Options
            social       Show the social info
            --no-social  Don't show the social info
-           ad       Show the ad info
-           --no-ad  Don't show the ad info
+           ad           Show the ad info
+           --no-ad      Don't show the ad info
+           -d, --debug  Print debug information 
 
         Examples
            npx neeraj-bio --no-social
@@ -26,7 +27,8 @@ const options = {
     },
     debug: {
       type: 'boolean',
-      default: false
+      default: false,
+      alias: 'd'
     }
   }
 }

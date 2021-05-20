@@ -12,6 +12,7 @@ const input = cli.input
 const flags = cli.flags
 
 init()
+input.includes('help') && cli.showHelp(0)
 log(data.bio)
 if (flags.social) {
         log(data.social)
@@ -20,4 +21,4 @@ if (flags.ad) {
         alert({ type: 'info', msg: data.ad })
 }
 //debug info if needed
-debug(flags.debug, input, flags)
+debug(flags.debug, cli)
