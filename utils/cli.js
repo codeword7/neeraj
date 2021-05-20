@@ -1,18 +1,24 @@
 const meow = require('meow');
+const { green, cyan, yellow } = require('chalk');
 
 const helpText = `
         Usage
-           npx neeraj-bio [options]
+           ${green(`npx neeraj-bio`)} ${yellow(`[--option]`)} ${cyan(`<command>`)}
         
         Options
-           social       Show the social info
-           --no-social  Don't show the social info
-           ad           Show the ad info
-           --no-ad      Don't show the ad info
-           -d, --debug  Print debug information 
+           ${yellow(`--social`)}       Print the social info
+           ${yellow(`--no-social`)}    Don't print the social info
+           ${yellow(`--ad`)}           Print the ad info
+           ${yellow(`--no-ad`)}        Don't print the ad info
+           ${yellow(`-d`)}, ${yellow(`--debug`)}    Print debug information
+           ${yellow(`-v`)}, ${yellow(`--version`)}  Print CLI version
+
+        Commands
+           ${cyan(`help`)}           Print CLI help information
 
         Examples
-           npx neeraj-bio --no-social
+           ${green(`npx neeraj-bio`)} ${yellow(`--no-social`)}
+           ${green(`npx neeraj-bio`)} ${yellow(`--no-ad`)}
 
 `
 const options = {
@@ -29,6 +35,11 @@ const options = {
       type: 'boolean',
       default: false,
       alias: 'd'
+    },
+    version: {
+      type: 'boolean',
+      default: false,
+      alias: 'v'
     }
   }
 }
