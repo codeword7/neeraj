@@ -5,17 +5,28 @@ const init = require('./utils/init')
 const data = require('./utils/data')
 const cli = require('./utils/cli')
 const debug = require('./utils/debug')
+const stats = require('./utils/stats')
 const log = console.log;
 
 
 const input = cli.input
 const flags = cli.flags
 
-init(flags.minimal, flags.clear)
-input.includes('help') && cli.showHelp(0)
-flags.bio && log(data.bio)
-flags.social && log(data.social)
-flags.ad && alert({ type: 'info', msg: data.ad })
+const cliData = async () => {
+        //init and help
+        init(flags.minimal, flags.clear)
+        input.includes('help') && cli.showHelp(0)
 
-//debug info if needed
-debug(flags.debug, cli)
+        //print out the info
+        flags.bio && log(data.bio)
+        flags.social && log(data.social)
+        flags.ad && alert({ type: 'info', msg: data.ad })
+
+        //stats
+        await stats()
+
+        //debug info if needed
+        debug(flags.debug, cli)
+}
+
+cliData()
