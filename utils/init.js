@@ -3,12 +3,12 @@ const unhandled = require('cli-handle-unhandled')
 const welcome = require('cli-welcome')
 const pkgJson = require('./../package.json')
 
-module.exports = () => {
+module.exports = (minimal, clear) => {
   unhandled()
 
   checkNode('12')
 
-  welcome({
+  !minimal && welcome({
     title: pkgJson.name,
     tagLine: `Nice to meet you`,
     description: pkgJson.description,
@@ -16,6 +16,8 @@ module.exports = () => {
     bgColor: `#FADC00`,
     color: `#000000`,
     bold: true,
-    clear: true,
+    clear,
   });
+
+  minimal && console.log(` Neeraj Kumar `)
 }

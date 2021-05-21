@@ -11,14 +11,11 @@ const log = console.log;
 const input = cli.input
 const flags = cli.flags
 
-init()
+init(flags.minimal, flags.clear)
 input.includes('help') && cli.showHelp(0)
-log(data.bio)
-if (flags.social) {
-        log(data.social)
-}
-if (flags.ad) {
-        alert({ type: 'info', msg: data.ad })
-}
+flags.bio && log(data.bio)
+flags.social && log(data.social)
+flags.ad && alert({ type: 'info', msg: data.ad })
+
 //debug info if needed
 debug(flags.debug, cli)
