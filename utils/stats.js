@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const { yellow } = require('chalk');
 const handleError = require('cli-handle-error')
 const ora = require('ora');
+const { prompt } = require('enquirer')
 
 const spinner = ora({ text: '' })
 const API_URL = `https://api.github.com/users/codeword7`
